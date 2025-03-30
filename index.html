@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="block" id="first">
-        <h1>Лекция: Фильтры в JavaScript</h1>
+        <h1>Лекция: Фильтрация в JavaScript</h1>
         <p style="font-size: larger;"><b>Что такое filter</b></p>
         <hr>
         <p class="underfirst"><b>Метод filter()</b> для массива создает копию заданного массива, в которой остаются
@@ -23,13 +26,13 @@
             4) Если нет — он пропускается.<br>
             5) В итоге получается новый массив с отфильтрованными значениями.<br>
         </p>
-        <p class="underfirst1"><b>Метод includes()</b> для массива определяет, содержит ли массив определенное значение,
+        <p class="underfirst"><b>Метод includes()</b> для массива определяет, содержит ли массив определенное значение,
             которое было передано методу, возвращая true или false.
         </p>
         <p class="underfirst1"><b>Более простыми словами:</b><br>
             1) Берётся массив.<br>
             2) Проверяется, есть ли в нём нужное значение<br>
-            3) ЕЕсли значение найдено - результат true, если нет - false.<br>
+            3) Если значение найдено - результат <u>true</u>, если не найдено - <u>false</u>.<br>
         </p>
     </div>
 
@@ -37,10 +40,10 @@
         <p><b>Первый пример</b></p>
         <hr>
         <p>Найти слова, где больше 6 букв</p>
-        <p>Слова: яблоко, трамвай, пиздец, клавиатура, сыр</p>
+        <p>Слова: яблоко, трамвай, штраф, клавиатура, сыр</p>
         <div class="primer__one">
             <div class="inprimer">
-                <button onclick="filterWords()">Показать длинные слова</button>
+                <button onclick="filterWords()" style="width: 90%; height: 5vh;">Показать длинные слова</button>
                 <p id="result__one"></p>
             </div>
         </div>
@@ -49,11 +52,11 @@
 
         <p><b>Второй пример</b></p>
         <hr>
-        <p>Это пример поиска слов <br>Введите фамилию или имя вашего одногруппника =)</p>
+        <p>Это пример поиска слов <br>Введите фамилию или имя вашего одногруппника (если input не заполнен, будет выведен весь список)</p>
         <div class="primer__one">
             <div class="inprimer">
-                <input type="text" id="searchInput" placeholder="Введите фамилию или имя">
-                <button onclick="search()">Найти</button>
+                <input type="text" id="searchInput" placeholder="Введите фамилию или имя" style="height: 2.5vh; width: 87%;">
+                <button onclick="search()" style="width: 90%; height: 5vh;">Найти</button>
                 <p id="result__two"></p>
             </div>
         </div>
@@ -62,13 +65,13 @@
         <p><b>Третий пример</b></p>
         <hr>
         <p id="underthird">Этот пример включает в себя поиск и сортировку в массиве. В данном примере есть название
-            прдемета и преподаветль. Чтобы найти конкретный предмет или преподавателя можно вользоваться поиском, или
-            воспоьзоваться строгой сортировкой</p>
+            предмета и преподаватель. Чтобы найти конкретный предмет или преподавателя можно вользоваться поиском, или
+            воспользоваться строгой сортировкой</p>
         <div class="primer__one">
             <div class="inprimer">
                 <h2 class="title__two">Колледж</h2>
-                <input type="text" id="search" placeholder="Найти препода">
-                <select id="category">
+                <input type="text" id="search" placeholder="Найти препода" style="height: 2.5vh; width: 92.5%;">
+                <select id="category" style="height: 4vh; width: 95%;">
                     <option value="all">Все</option>
                     <option value="prog">Программирование</option>
                     <option value="math">Математика</option>
